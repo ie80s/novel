@@ -6,9 +6,9 @@
           show-action
           shape="round"
         >
-          <div slot="action" @click="onSearch">搜索</div>
+          <div slot="action" >搜索</div>
         </van-search>
-    </div><br>
+    </div>
     <div class="Notic">
       <van-notice-bar text="通知内容XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" left-icon="volume-o"/>
     </div>
@@ -24,19 +24,17 @@
       </div>
       </van-card>
     </div>
-    <van-tabbar v-model="active"
-      active-color="#07c160" inactive-color="#000">
-      <van-tabbar-item icon="send-gift">书架</van-tabbar-item>
-      <van-tabbar-item icon="shopping-cart">商城</van-tabbar-item>
-      <van-tabbar-item icon="star">收藏</van-tabbar-item>
-      <van-tabbar-item icon="friends">我的</van-tabbar-item>
-    </van-tabbar>
+    <pops></pops>
   </div>
 </template>
 
 <script>
+import pops from '@/components/pops'
 
 export default {
+  components:{
+    pops,
+  },
   data() {
     return {
       active: 0,
@@ -80,17 +78,15 @@ export default {
           status:'已读',
           time:'2019-10-01',
         },
-        {
-          image:'./assets/1.jpg',
-          author:'xx',
-          name:'Vue前端框架',
-          status:'已读',
-          time:'2019-10-01',
-        },
       ]   
     }
   }
 }
+    
+  
+    
+  
+
 
 </script>
 <style scoped lang="scss">
