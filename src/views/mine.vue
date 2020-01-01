@@ -229,7 +229,7 @@ export default {
     margin-left: 5%;
 }
 .van-popup{
-    font-family: '宋体';
+    font-family: '微软雅黑';
 }
 .back{
     width: 100%;
